@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = sv_user_management
+build_property.ProjectDir = G:\code\dotnet-project\dotnet-project\sv-user-management.core\

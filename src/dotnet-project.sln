@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{26319FCB-9D41-4A47-8739-D391594ABC99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9AA34E42-E03F-4C54-97E5-6B50E2B452AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sv-user-management.core", "sv-user-management.core\sv-user-management.core.csproj", "{B9393A0A-64FA-4A37-8A7B-CF48ED982388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{16E72053-4240-48BE-A52A-E4B82C9418D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sv-User-Management", "Sv-User-Management", "{201A002A-4678-4A0C-A300-E8C374FC4BE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sv-user-management.server", "sv-user-management.server\sv-user-management.server.csproj", "{834260D5-13FF-42F1-A11B-E5F85BBEB5E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sv-user-management.configuration", "sv-user-management.configuration\sv-user-management.configuration.csproj", "{96125362-9426-4E0E-A517-6407D6570EB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16E72053-4240-48BE-A52A-E4B82C9418D1} = {9AA34E42-E03F-4C54-97E5-6B50E2B452AF}
+		{201A002A-4678-4A0C-A300-E8C374FC4BE2} = {9AA34E42-E03F-4C54-97E5-6B50E2B452AF}
+		{B9393A0A-64FA-4A37-8A7B-CF48ED982388} = {201A002A-4678-4A0C-A300-E8C374FC4BE2}
+		{834260D5-13FF-42F1-A11B-E5F85BBEB5E4} = {201A002A-4678-4A0C-A300-E8C374FC4BE2}
+		{96125362-9426-4E0E-A517-6407D6570EB5} = {201A002A-4678-4A0C-A300-E8C374FC4BE2}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9393A0A-64FA-4A37-8A7B-CF48ED982388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9393A0A-64FA-4A37-8A7B-CF48ED982388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9393A0A-64FA-4A37-8A7B-CF48ED982388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9393A0A-64FA-4A37-8A7B-CF48ED982388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E72053-4240-48BE-A52A-E4B82C9418D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E72053-4240-48BE-A52A-E4B82C9418D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E72053-4240-48BE-A52A-E4B82C9418D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E72053-4240-48BE-A52A-E4B82C9418D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{834260D5-13FF-42F1-A11B-E5F85BBEB5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{834260D5-13FF-42F1-A11B-E5F85BBEB5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{834260D5-13FF-42F1-A11B-E5F85BBEB5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{834260D5-13FF-42F1-A11B-E5F85BBEB5E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96125362-9426-4E0E-A517-6407D6570EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96125362-9426-4E0E-A517-6407D6570EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96125362-9426-4E0E-A517-6407D6570EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96125362-9426-4E0E-A517-6407D6570EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

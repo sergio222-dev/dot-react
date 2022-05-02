@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "w+CwD9XtCDEPKmL365ym3S26gxxfgXGIXY6kmIndeC4=",
+  "Source": "sv-user-management.server",
+  "BasePath": "_content/sv-user-management.server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
