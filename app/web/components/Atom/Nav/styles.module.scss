@@ -1,0 +1,20 @@
+.v1-header {
+  height: 64px;
+}
+
+.v1-nav {
+  height: 64px;
+  display: flex;
+
+  .v1-ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    .v1-li {
+      padding: 0 10px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+}

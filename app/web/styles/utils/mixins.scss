@@ -1,0 +1,64 @@
+@mixin make-buttons() {
+  //borders
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0.1rem;
+
+  // colors
+  background-color: $v1-light;
+  border-color: shade-color($v1-light, 20%);
+  color: $v1-dark;
+
+  //spacing
+  padding: 0.6rem 1.4rem;
+
+  //text
+  font-weight: 400;
+  text-decoration: 0;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+
+  font-size: font("2");
+
+  // box
+  min-height: 3.6rem;
+
+  &:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+  }
+
+  &[data-status=#{$v1-status-important}] {
+    background-color: $v1-important;
+    border-color: shade-color($v1-important, 20%);
+  }
+}
+@mixin make-alerts() {
+  // colors
+  background-color: $v1-common;
+  border-color: shade-color($v1-common, 20%);
+
+
+  //borders
+  border-style: solid;
+  border-width: .2rem;
+
+  //text
+  text-align: center;
+  font-weight: 400;
+  font-size: font("3");
+
+  &[data-status=#{$v1-status-info}] {
+    background-color: $v1-info;
+    border-color: shade-color($v1-info, 20%);
+    color: white;
+  }
+
+  &[data-status=#{$v1-status-error}] {
+    background-color: $v1-error;
+    border-color: shade-color($v1-error, 20%);
+    color: white;
+  }
+}

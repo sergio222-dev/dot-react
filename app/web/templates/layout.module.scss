@@ -1,0 +1,14 @@
+@import "styles/utils/base.module";
+@import "styles/utils/container.module";
+
+$margin-container: 10px;
+
+.page-container-row {
+  @include make-row();
+  height: calc(100vh - #{$margin-container} * 2);
+  margin: $margin-container;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0 2px 5px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 2px 5px 6px rgba(0,0,0,0.75);
+}

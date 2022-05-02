@@ -1,0 +1,51 @@
+//Status
+$v1-status-important: "Important";
+$v1-status-error: "Error";
+$v1-status-warn: "Warning";
+$v1-status-info: "Info";
+
+
+$v1-light: #FBF5F3;
+$v1-dark: #000022;
+$v1-important: #D45EB5;
+$v1-common: #7E7B8B;
+$v1-error: #DE3C4B;
+$v1-warn: #E28413;
+$v1-info: #E9A14B;
+
+$v1-font-size-default: 10px;
+
+//https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($v1-font-size-default)}rem;
+}
+
+$v1-fonts: (
+        "1": rem(13px),
+        "2": rem(16px),
+        "3": calc(rem(16px) + .3vw),
+        "4": calc(rem(17px) + .5vw)
+);
+
+// Legacy
+$v1-main-color: #FBF5F3;
+$v1-main-border-color: #E4DFDD;
+$v1-input-border-color: #000022;
+
+
+$v1-red: #C42847;
+$v1-yellow: #E28413;
+
+$v1-white-dark: #E4DFDD;
+$v1-white-light: #FBF5F3;
+$v1-red-light: #C42847;
+$v1-red-dark: #DE3C4B;
+$v1-disabled-red: #DC7F9C;
+$v1-blue-dark: #000022;
+$v1-yellow-dark: #71421B;
+$v1-yellow-light: #E28413;
+$v1-yellow-lighten: #EFBD83;

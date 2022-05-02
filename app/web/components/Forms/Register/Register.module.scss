@@ -1,0 +1,21 @@
+@import "../../../styles/utils/base.module";
+@import "../../../styles/utils/variables";
+
+.v1-form-container {
+  .v1-form-label {
+    padding: 0.7rem 0;
+    font-size: 1.4rem;
+  }
+
+  .v1-form-bottom {
+   padding: 4rem 0;
+
+  .v1-left {
+    float: left;
+  }
+
+  .v1-right {
+    float: right;
+  }
+  }
+}
