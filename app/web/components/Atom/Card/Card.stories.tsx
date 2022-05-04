@@ -6,9 +6,12 @@ export default {
   component: Card,
 } as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = (args) => (
+const Template: ComponentStory<typeof Card> = () => (
   <div style={{ maxWidth: "500px" }}>
-    <Card>Contenido</Card>
+    <Card>
+      <Card.CardHeader>Header de Carta</Card.CardHeader>
+      <Card.CardContent>Contenido de Carta</Card.CardContent>
+    </Card>
   </div>
 );
 

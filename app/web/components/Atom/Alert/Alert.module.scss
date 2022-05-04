@@ -3,26 +3,4 @@
 
 .v1-alert-container {
   @include make-alerts();
-
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
-  //min-height: 80px;
-  //background-color: $v1-yellow-lighten;
-  //border: 1px solid $v1-yellow-dark;
-  //color: $v1-blue-dark;
-  //border-radius: 2px;
-  //font-size: 1.6rem;
-  //
-  //&[data-color="Error"] {
-  //  background-color: $v1-red-light;
-  //  border-color: 1px solid $v1-red-light;
-  //  color: $v1-white-light;
-  //}
-  //
-  //&[data-color="Warn"] {
-  //  background-color: $v1-yellow-lighten;
-  //  border: 1px solid $v1-yellow-dark;
-  //  color: $v1-blue-dark;
-  //}
 }

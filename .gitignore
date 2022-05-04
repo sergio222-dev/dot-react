@@ -12,6 +12,9 @@ coverage
 .next/
 out/
 
+#react buddy
+dev/
+
 # production
 build
 
