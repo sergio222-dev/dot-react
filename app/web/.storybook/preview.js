@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import "../templates/global.scss";
-import { BuildContainer } from "../lib/Shared/DI/Container";
+import { BuildContainer } from "../lib/Shared/Infrastructure/DI/Container";
 
 BuildContainer();
 

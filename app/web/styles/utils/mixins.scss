@@ -43,12 +43,15 @@
 
   //borders
   border-style: solid;
-  border-width: .2rem;
+  border-width: .175rem;
 
   //text
   text-align: center;
   font-weight: 400;
   font-size: font("3");
+
+  //spacing
+  padding: .2rem .5rem;
 
   &[data-status=#{$v1-status-info}] {
     background-color: $v1-info;
