@@ -70,5 +70,8 @@
       "prettier --write",
       "eslint '*/**/*.{js,jsx,ts,tsx}' --fix"
     ]
+  },
+  "engines": {
+    "node": ">=16.14.2"
   }
 }
