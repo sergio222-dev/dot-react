@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import "../templates/global.scss";
+import "../app/styles/app.scss";
 import { BuildContainer } from "../lib/Shared/Infrastructure/DI/Container";
 
 BuildContainer();

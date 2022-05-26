@@ -2,11 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@templates/*": ["templates/*"],
-      "@styles/*": ["styles/*"],
-      "@atoms/*": ["components/Atom/*"],
-      "@forms/*": ["components/Forms/*"],
-      "@organism/*": ["components/Organism/*"],
+      "@templates/*": ["app/templates/*"],
+      "@styles/*": ["app/styles/*"],
+      "@atoms/*": ["app/components/Atom/*"],
+      "@forms/*": ["app/components/Forms/*"],
+      "@organism/*": ["app/components/Organism/*"],
+      "@hooks/*": ["hooks/*"],
+      "@context/*": ["context/*"],
       "@lib/*": ["lib/*"]
     },
     "target": "es5",

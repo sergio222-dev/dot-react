@@ -1,5 +1,9 @@
 using System;
+using System.Data.Common;
+using System.Data.SqlClient;
 using Autofac;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Shared.Infrastructure;
 using sv_user_management.configuration;
 using sv_user_management.configuration.Modules;
+using sv_user_management.Shared;
 
 namespace WebApplication1
 {
@@ -29,13 +34,23 @@ namespace WebApplication1
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("Users", policy =>
+                options.AddDefaultPolicy(policy =>
                 {
-                    policy.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
-                    policy.WithOrigins("http://*").AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+                    policy.WithOrigins("http://localhost:3000", "https://localhost:3000").AllowAnyHeader().AllowAnyMethod();
                 });
             });
             services.ConfigureServices(_configuration);
+
+
+            // jwt authentication
+            // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //     .AddJwtBearer();
+            //
+            // services
+            //     .AddIdentity<sv_user_management.User.Domain.User, RegularUser>()
+            //     .AddUserManager<UserManager<sv_user_management.User.Domain.User>>()
+            //     .AddEntityFrameworkStores<UserManagementDbContext>();
+
             services.AddControllers();
             // services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "sv-user-management.server", Version = "v1" }); });
         }
@@ -54,8 +69,9 @@ namespace WebApplication1
             
             app.UseRouting();
 
-            app.UseCors(options => options.SetIsOriginAllowed(x => _ = true).AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

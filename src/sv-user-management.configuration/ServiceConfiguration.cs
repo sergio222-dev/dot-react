@@ -12,6 +12,7 @@ namespace sv_user_management.configuration
             services.ConfigureApplicationServices();
             services.ConfigureMediatorServices();
             services.ConfigureSwaggerServices();
+            services.ConfigureAuthentication();
             
             return services;
         }

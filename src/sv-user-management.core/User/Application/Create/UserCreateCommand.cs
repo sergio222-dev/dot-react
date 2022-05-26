@@ -7,6 +7,7 @@ namespace sv_user_management.User.Application.Create
 {
     public sealed class UserCreateCommand : IRequest
     {
+        //TODO this should be exists with this decorators and implement IRequest? is this an application object implementing an infrastructure interface?
         #region Properties
 
         [Required] public Guid UserId { get; set; }

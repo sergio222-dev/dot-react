@@ -1,0 +1,59 @@
+$theme-colors: (
+        "primary": red,
+);
+
+html, body {
+  margin: 0;
+  font-size: $v1-font-size-default;
+  color: shade-color($v1-dark, 10%);
+
+
+  //@font-face {
+  //  font-family: Roboto sans-serif;
+  //  src: url("/public/fonts/roboto/Roboto-Regular.ttf");
+  //}
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.v1-flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+$v1-paddings: 4;
+$v1-margins: 4;
+
+@mixin v1-padding-side {
+  @for $i from 1 through $v1-paddings {
+    .v1-padding-side-#{$i} {
+      padding-right: #{$i * 0.5}rem;
+      padding-left: #{$i * 0.5}rem;
+    }
+  }
+}
+
+@include v1-padding-side;
+
+@mixin v1-margin-side {
+  @for $i from 1 through $v1-margins {
+    .v1-margin-side-#{$i} {
+      margin-right: #{$i * 0.5}rem;
+      margin-left: #{$i * 0.5}rem;
+    }
+  }
+}
+
+@include v1-margin-side;
+

@@ -1,6 +1,0 @@
-@import "styles/utils/base.module";
-@import "styles/utils/variables";
-
-.v1-alert-container {
-  @include make-alerts();
-}

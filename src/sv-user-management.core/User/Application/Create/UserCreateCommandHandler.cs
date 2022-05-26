@@ -30,7 +30,7 @@ public class UserCreateCommandHandler : IRequestHandler<UserCreateCommand, Unit>
         var name = new UserName(command.UserName);
         var password = new UserPassword(command.UserPassword);
         
-        UserCreator.Create(id, name, password);
+        await UserCreator.Create(id, name, password);
         
         return Unit.Value;
     }
