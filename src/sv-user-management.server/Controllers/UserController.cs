@@ -14,7 +14,7 @@ using sv_user_management.User.Infrastructure.Persistence;
 namespace WebApplication1.Controllers;
 [ApiController]
 [Route("[controller]")]
-public class UserController: ControllerBase
+public class UserController : ControllerBase
 {
     #region Properties
 
@@ -27,11 +27,6 @@ public class UserController: ControllerBase
 
     public UserController(ISender mediator, UserManager<IdentityUser> userManager)
     {
-        // var userId = new UserId(Guid.NewGuid());
-        // var userName = new UserName("sergion");
-        // var userPass = new UserPassword("sergion");
-        // var user = sv_user_management.User.Domain.User.Create(userId, userName, userPass);
-        // userManager.CreateAsync(user, "a");
         _mediator = mediator;
         _userManager = userManager;
     }
@@ -44,31 +39,11 @@ public class UserController: ControllerBase
     [Route("/create")]
     public async Task<IActionResult> Create(UserCreateCommand command)
     {
-        
-        // Console.WriteLine(user.UserName);
-        // await CreateAsync();
         await _mediator.Send(command);
 
         return Ok();
     }
 
-    private async Task CreateAsync()
-    {
-        var sergio = await _userManager.FindByNameAsync("sergio2");
-        
-        IdentityUser newUser = new()
-        {
-            Email = "molinasergio91@gmail.com",
-            SecurityStamp = Guid.NewGuid().ToString(),
-            UserName = "sergio2",
-        };
-        
-        var result = await _userManager.CreateAsync(newUser, "Carlitos2!");
-
-        Console.WriteLine(result);
-        
-        Console.WriteLine(sergio);
-    }
 
     #endregion
 }

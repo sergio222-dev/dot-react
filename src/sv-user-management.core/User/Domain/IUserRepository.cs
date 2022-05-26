@@ -8,6 +8,6 @@ namespace sv_user_management.User.Domain
     {
         // public User[] List();
 
-        public Task Register(User user);
+        public Task Add(User user);
     }
 }

@@ -18,7 +18,7 @@ public class EntityFrameworkUserRepository : IUserRepository
     private readonly UserManager<IdentityUser> _manager;
 
     #endregion
-    
+
     #region Contructors
 
     public EntityFrameworkUserRepository(UserManager<IdentityUser> manager)
@@ -29,16 +29,16 @@ public class EntityFrameworkUserRepository : IUserRepository
     #endregion
 
     #region Publics
-    
-    public async Task Register(Domain.User user)
+
+    public async Task Add(Domain.User user)
     {
         //TODO should be in the repository?
         var userExists = await _manager.FindByNameAsync(user.Name.Value);
-        
+
         if (userExists != null)
             throw new Exception("User exists");
 
-        IdentityUser newUser = new ()
+        IdentityUser newUser = new()
         {
             Email = "molinasergio91@gmail.com",
             Id = user.Id.Value.ToString(),
@@ -51,7 +51,7 @@ public class EntityFrameworkUserRepository : IUserRepository
         if (!result.Succeeded)
             throw new Exception("User can't be created");
     }
-    
+
     #endregion
 
 }

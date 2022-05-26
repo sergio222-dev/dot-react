@@ -7,9 +7,9 @@ public class UserId : GuidValueObject
 {
     #region Contructors
 
-    private UserId() {}
-    
-    public UserId(Guid oGuid) : base (oGuid) {}
+    private UserId() { }
+
+    public UserId(Guid oGuid) : base(oGuid) { }
 
     #endregion
 }

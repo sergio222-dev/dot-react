@@ -14,7 +14,7 @@ public class EntityFrameworkModule : Module
     private const string CORE_NAMESPACE = "sv-user-management.core";
 
     #endregion
-    
+
     #region Override
 
     protected override void Load(ContainerBuilder builder)
@@ -24,7 +24,7 @@ public class EntityFrameworkModule : Module
         Console.WriteLine("Loading EntityFramework Repository Module...", ConsoleColor.Blue);
 
         var assembly = Assembly.Load(CORE_NAMESPACE);
-        
+
         // Register all the EntityFramework Repository
         builder
             .RegisterAssemblyTypes(assembly)

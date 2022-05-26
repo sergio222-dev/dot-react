@@ -16,7 +16,7 @@ namespace sv_user_management.configuration.Providers
             services.AddDbContext<UserManagementDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("Project1"))
             );
-            
+
             return services;
         }
     }
