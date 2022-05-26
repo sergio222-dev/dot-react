@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import RegisterFormCard from "@organism/RegisterFormCard";
-import styles from "@templates/pages/register.module.scss";
+import styles from "../app/templates/pages/register.module.scss";
 
 const Register: NextPage = () => {
   return (

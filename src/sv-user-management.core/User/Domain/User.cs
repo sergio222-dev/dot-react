@@ -1,4 +1,5 @@
-﻿using Shared.Domain;
+﻿using Microsoft.AspNetCore.Identity;
+using Shared.Domain;
 using sv_user_management.User.Domain.ValueObjects;
 
 namespace sv_user_management.User.Domain
@@ -12,6 +13,8 @@ namespace sv_user_management.User.Domain
         public UserName Name { get; private set; }
         
         public UserPassword Password { get; private set; }
+        
+
 
         #endregion
 
@@ -21,18 +24,19 @@ namespace sv_user_management.User.Domain
 
         private User(UserId id, UserName name, UserPassword password)
         {
-            this.Id = id;
-            this.Name = name;
-            this.Password = password;
+            Id = id;
+            Name = name;
+            Password = password;
+
         }
 
         #endregion
 
         #region Publics
 
-        public static User Create(UserId oUserId, UserName oUserName, UserPassword oUserPassword)
+        public static User Create(UserId userId, UserName userName, UserPassword userPassword)
         {
-            var oUser = new User(oUserId, oUserName, oUserPassword);
+            var oUser = new User(userId, userName, userPassword );
 
             return oUser;
         }

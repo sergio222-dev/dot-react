@@ -1,0 +1,21 @@
+@import "../../../styles/abstracts/bootstrap";
+@import "../../../styles/abstracts/variables";
+
+.v1-register-form-card-container {
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    width: 400px;
+    min-height: 416px;
+  }
+
+  .v1-register-form-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.6rem;
+    background-color: $v1-blue-dark;
+    color: $v1-white-light;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../../styles/abstracts/bootstrap";
+@import "../../../styles/abstracts/variables";
+
+.v1-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.v1-app-bar-container {
+  background-color: white;
+}
+

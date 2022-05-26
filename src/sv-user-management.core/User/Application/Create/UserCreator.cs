@@ -1,4 +1,6 @@
-﻿using Shared.Application;
+﻿using System.Threading.Tasks;
+using Shared.Application;
+using sv_user_management.Shared;
 using sv_user_management.User.Domain;
 using sv_user_management.User.Domain.ValueObjects;
 
@@ -11,6 +13,7 @@ public class UserCreator: IService
     private IUserRepository _repository;
 
     #endregion
+
     public UserCreator(IUserRepository repository)
     {
         _repository = repository;
@@ -18,11 +21,11 @@ public class UserCreator: IService
 
     #region Publics
 
-    public void Create(UserId userId, UserName userName, UserPassword userPassword)
+    public async Task Create(UserId userId, UserName userName, UserPassword userPassword)
     {
         var oUser = Domain.User.Create(userId, userName, userPassword);
         
-        _repository.Save(oUser);
+        await _repository.Register(oUser);
         
         //TODO:Publish event here
     }

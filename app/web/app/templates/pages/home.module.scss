@@ -1,0 +1,11 @@
+@import "../../styles/abstracts/bootstrap";
+@import "../../styles/abstracts/variables";
+
+.container {
+  @include make-container();
+}
+
+.v1-logo-bar {
+  height: 30px;
+  background-color: $v1-dark;
+}

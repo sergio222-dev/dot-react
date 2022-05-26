@@ -1,0 +1,40 @@
+@import "../../../styles/abstracts/bootstrap";
+@import "../../../styles/abstracts/app";
+
+.v1-button {
+  //borders
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0.1rem;
+
+  // colors
+  background-color: $v1-light;
+  border-color: shade-color($v1-light, 20%);
+  color: $v1-dark;
+
+  //spacing
+  padding: 0.6rem 1.4rem;
+
+  //text
+  font-weight: 400;
+  text-decoration: 0;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+
+  font-size: font("2");
+
+  // box
+  min-height: 3.6rem;
+
+  &:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+  }
+
+  &[data-status=#{$v1-status-important}] {
+    background-color: $v1-important;
+    border-color: shade-color($v1-important, 20%);
+  }
+}

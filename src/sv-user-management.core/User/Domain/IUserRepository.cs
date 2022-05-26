@@ -1,9 +1,13 @@
-﻿namespace sv_user_management.User.Domain
+﻿using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
+
+namespace sv_user_management.User.Domain
 {
     public interface IUserRepository
     {
-        public User[] List();
+        // public User[] List();
 
-        public void Save(User user);
+        public Task Register(User user);
     }
 }

@@ -1,0 +1,12 @@
+@import "../../styles/abstracts/bootstrap";
+
+.v1-register-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100vh;
+
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+  }
+}

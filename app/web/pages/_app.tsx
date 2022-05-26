@@ -1,17 +1,19 @@
-import { BuildContainer } from "@lib/Shared/Infrastructure/DI/Container";
+import {BuildContainer, container} from "@lib/Shared/Infrastructure/DI/Container";
 import "reflect-metadata";
-import type { AppProps } from "next/app";
-import { RecoilRoot } from "recoil";
-import "@templates/global.scss";
+import type {AppProps} from "next/app";
+import {RecoilRoot} from "recoil";
+import "@styles/app.scss";
+import {ContainerContext} from "../context/ContainerContext"
 
-console.log("builded");
 BuildContainer();
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
+    <ContainerContext.Provider value={container}>
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </ContainerContext.Provider>
   );
 }
 
