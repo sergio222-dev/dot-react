@@ -1,3 +1,3 @@
 ﻿namespace Shared.Application;
 
-public interface IService {}
+public interface IService { }

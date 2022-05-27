@@ -2,11 +2,11 @@
 
 namespace Shared.Domain.ValueObjects
 {
-    public class GuidValueObject: ValueObject<Guid>
+    public class GuidValueObject : ValueObject<Guid>
     {
         #region Constructors
 
-        protected GuidValueObject() {}
+        protected GuidValueObject() { }
 
         protected GuidValueObject(Guid oValue)
         {

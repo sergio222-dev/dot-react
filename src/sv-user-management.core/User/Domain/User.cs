@@ -7,20 +7,20 @@ namespace sv_user_management.User.Domain
     public class User : IAggregateRoot
     {
         #region Properties
-        
+
         public UserId Id { get; private set; }
 
         public UserName Name { get; private set; }
-        
+
         public UserPassword Password { get; private set; }
-        
+
 
 
         #endregion
 
         #region Constructors
 
-        private User() {}
+        private User() { }
 
         private User(UserId id, UserName name, UserPassword password)
         {
@@ -36,7 +36,7 @@ namespace sv_user_management.User.Domain
 
         public static User Create(UserId userId, UserName userName, UserPassword userPassword)
         {
-            var oUser = new User(userId, userName, userPassword );
+            var oUser = new User(userId, userName, userPassword);
 
             return oUser;
         }

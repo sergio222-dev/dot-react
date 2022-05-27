@@ -46,7 +46,7 @@ namespace sv_user_management.Shared
 
             base.OnConfiguring(optionsBuilder);
         }
-        
+
         #endregion
     }
 }

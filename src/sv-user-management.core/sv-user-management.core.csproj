@@ -25,6 +25,7 @@
     <ItemGroup>
       <Folder Include="Migrations" />
       <Folder Include="Shared\Infrastructure\Persistence" />
+      <Folder Include="User\Application\UseCase" />
     </ItemGroup>
 
     <ItemGroup>

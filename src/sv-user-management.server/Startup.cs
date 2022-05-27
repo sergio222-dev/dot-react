@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data.Common;
 using System.Data.SqlClient;
 using Autofac;
@@ -41,18 +41,7 @@ namespace WebApplication1
             });
             services.ConfigureServices(_configuration);
 
-
-            // jwt authentication
-            // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //     .AddJwtBearer();
-            //
-            // services
-            //     .AddIdentity<sv_user_management.User.Domain.User, RegularUser>()
-            //     .AddUserManager<UserManager<sv_user_management.User.Domain.User>>()
-            //     .AddEntityFrameworkStores<UserManagementDbContext>();
-
             services.AddControllers();
-            // services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "sv-user-management.server", Version = "v1" }); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +55,7 @@ namespace WebApplication1
             }
 
             app.UseHttpsRedirection();
-            
+
             app.UseRouting();
 
             app.UseCors();
@@ -80,10 +69,10 @@ namespace WebApplication1
         public void ConfigureContainer(ContainerBuilder builder)
         {
             Console.WriteLine(Logos.Autofac());
-            
+
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Loading Modules...");
-            
+
             builder.RegisterModule(new EntityFrameworkModule());
 
             builder.RegisterBuildCallback(_ =>
@@ -91,7 +80,7 @@ namespace WebApplication1
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("All Modules Loaded.");
             });
-            
+
             Console.ResetColor();
         }
     }

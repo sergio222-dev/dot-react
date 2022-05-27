@@ -1,9 +1,9 @@
-﻿using Shared.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Shared.Domain;
 
 namespace Shared.Infrastructure.Persistence.EntityFramework
 {
-    public abstract class EntityFrameworkRepository<T>: IEntityFrameworkRepository<T> where T : IAggregateRoot
+    public abstract class EntityFrameworkRepository<T> : IEntityFrameworkRepository<T> where T : IAggregateRoot
     {
         #region Properties
 
