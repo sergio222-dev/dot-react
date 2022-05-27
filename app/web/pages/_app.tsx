@@ -4,17 +4,19 @@ import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
 import "@styles/app.scss";
 import { ContainerContext } from "@context/ContainerContext";
+import { ObseverAtom } from "@atoms/ObseverAtom";
 
 BuildContainer();
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return (
-        <ContainerContext.Provider value={container}>
-            <RecoilRoot>
-                <Component {...pageProps} />
-            </RecoilRoot>
-        </ContainerContext.Provider>
-    );
+  return (
+    <ContainerContext.Provider value={container}>
+      <RecoilRoot>
+        <ObseverAtom />
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </ContainerContext.Provider>
+  );
 }
 
 export default MyApp;
