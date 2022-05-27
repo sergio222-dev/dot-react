@@ -1,9 +1,9 @@
-import {FormEvent, useRef} from "react";
-import {useRouter} from "next/router";
-import {useRecoilValue} from "recoil";
-import {userMetaAtom} from "@lib/User/Infrastructure/State/UserAtom";
-import {IUserMetaState} from "@lib/User/Domain/UserRepository";
-import {useUser} from "@lib/User/Presentation/useUser";
+import { FormEvent, useRef } from "react";
+import { useRouter } from "next/router";
+import { useRecoilValue } from "recoil";
+import { userMetaAtom } from "@lib/User/Infrastructure/State/UserAtom";
+import { IUserMetaState } from "@lib/User/Domain/UserRepository";
+import { useUser } from "@lib/User/Presentation/useUser";
 
 // UI LOGIC
 export const useRegisterForm = () => {
@@ -36,7 +36,6 @@ export const useRegisterForm = () => {
     });
   };
 
-
   return [
     {
       successfulRegistration: userMetaState.successfulRegistration,
@@ -47,6 +46,6 @@ export const useRegisterForm = () => {
     {
       handleBackNavigation,
       handleRegistration,
-    }// operators
-  ]
-}
+    }, // operators
+  ];
+};

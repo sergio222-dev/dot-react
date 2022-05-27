@@ -3,5 +3,5 @@ import cls from "classnames";
 import styles from "./styles.module.scss";
 
 export const Li: FC<HTMLAttributes<HTMLLIElement>> = ({ children, className, ...props }) => (
-  <li className={cls(className, styles["v1-li"])}>{children}</li>
+    <li className={cls(className, styles["v1-li"])} {...props}>{children}</li>
 );

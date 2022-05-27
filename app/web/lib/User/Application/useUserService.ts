@@ -1,6 +1,6 @@
-import {UserRepositoryType} from "@lib/User/Domain/UserRepository";
-import {GUID} from "@lib/Shared/Utils/GUID";
-import {User} from "@lib/User/Domain/User";
+import { UserRepositoryType } from "@lib/User/Domain/UserRepository";
+import { GUID } from "@lib/Shared/Utils/GUID";
+import { User } from "@lib/User/Domain/User";
 
 // Application Data Model
 interface RegisterUserModel {
@@ -9,7 +9,6 @@ interface RegisterUserModel {
 }
 
 export const useUserService = (userRepository: UserRepositoryType) => {
-
   const userRepositoryActions = userRepository();
 
   const RegisterUser = async (formData: RegisterUserModel) => {
@@ -17,7 +16,7 @@ export const useUserService = (userRepository: UserRepositoryType) => {
     const user: User = User.CREATE(id, formData.userName, formData.userPassword);
 
     await userRepositoryActions.Save(user);
-  }
+  };
 
   return {
     RegisterUser,

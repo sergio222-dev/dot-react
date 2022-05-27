@@ -1,4 +1,4 @@
-import {useContainerContext} from "@context/ContainerContext";
+import { useContainerContext } from "@context/ContainerContext";
 
 export const useRepository = <T>(type: symbol) => {
   // CONTEXT
@@ -9,4 +9,4 @@ export const useRepository = <T>(type: symbol) => {
   }
 
   return container.get<T>(type);
-}
+};
