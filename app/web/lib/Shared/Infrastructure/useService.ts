@@ -1,4 +1,4 @@
-import {useContainerContext} from "@context/ContainerContext";
+import { useContainerContext } from "@context/ContainerContext";
 
 export const useService = <T>(type: symbol) => {
   // CONTEXT

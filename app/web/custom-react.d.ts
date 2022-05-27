@@ -1,7 +1,7 @@
-import React from 'react';
-import {interfaces} from "inversify";
+import React from "react";
+import { interfaces } from "inversify";
 
-declare module 'react' {
+declare module "react" {
   import Container = interfaces.Container;
   // typing for component that use container provider
   type FCP<P = unkown & { container: Container }> = React.FunctionComponent<P>;

@@ -1,51 +1,45 @@
-//Status
+// Status
 $v1-status-important: "Important";
 $v1-status-error: "Error";
 $v1-status-warn: "Warning";
 $v1-status-info: "Info";
-
-
-$v1-light: #FBF5F3;
-$v1-dark: #000022;
-$v1-important: #D45EB5;
-$v1-common: #7E7B8B;
-$v1-error: #DE3C4B;
-$v1-warn: #E28413;
-$v1-info: #E9A14B;
-
+$v1-light: #fbf5f3;
+$v1-dark: #002;
+$v1-important: #d45eb5;
+$v1-common: #7e7b8b;
+$v1-error: #de3c4b;
+$v1-warn: #e28413;
+$v1-info: #e9a14b;
 $v1-font-size-default: 10px;
 
-//https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd
-@function stripUnit($value) {
+// https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd
+@function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
 
 @function rem($pxValue) {
-  @return #{stripUnit($pxValue) / stripUnit($v1-font-size-default)}rem;
+  @return #{strip-unit($pxValue) / strip-unit($v1-font-size-default)}rem;
 }
 
 $v1-fonts: (
-        "1": rem(13px),
-        "2": rem(16px),
-        "3": calc(rem(16px) + .3vw),
-        "4": calc(rem(17px) + .5vw)
+  "1": rem(13px),
+  "2": rem(16px),
+  "3": calc(rem(16px) + 0.3vw),
+  "4": calc(rem(17px) + 0.5vw),
 );
 
 // Legacy
-$v1-main-color: #FBF5F3;
-$v1-main-border-color: #E4DFDD;
-$v1-input-border-color: #000022;
-
-
-$v1-red: #C42847;
-$v1-yellow: #E28413;
-
-$v1-white-dark: #E4DFDD;
-$v1-white-light: #FBF5F3;
-$v1-red-light: #C42847;
-$v1-red-dark: #DE3C4B;
-$v1-disabled-red: #DC7F9C;
-$v1-blue-dark: #000022;
-$v1-yellow-dark: #71421B;
-$v1-yellow-light: #E28413;
-$v1-yellow-lighten: #EFBD83;
+$v1-main-color: #fbf5f3;
+$v1-main-border-color: #e4dfdd;
+$v1-input-border-color: #002;
+$v1-red: #c42847;
+$v1-yellow: #e28413;
+$v1-white-dark: #e4dfdd;
+$v1-white-light: #fbf5f3;
+$v1-red-light: #c42847;
+$v1-red-dark: #de3c4b;
+$v1-disabled-red: #dc7f9c;
+$v1-blue-dark: #002;
+$v1-yellow-dark: #71421b;
+$v1-yellow-light: #e28413;
+$v1-yellow-lighten: #efbd83;

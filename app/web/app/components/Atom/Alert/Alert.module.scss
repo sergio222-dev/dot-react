@@ -6,26 +6,25 @@
   background-color: $v1-common;
   border-color: shade-color($v1-common, 20%);
 
-
-  //borders
+  // borders
   border-style: solid;
-  border-width: .175rem;
+  border-width: 0.175rem;
 
-  //text
+  // text
   text-align: center;
   font-weight: 400;
   font-size: font("3");
 
-  //spacing
-  padding: .2rem .5rem;
+  // spacing
+  padding: 0.2rem 0.5rem;
 
-  &[data-status=#{$v1-status-info}] {
+  &[data-status="#{$v1-status-info}"] {
     background-color: $v1-info;
     border-color: shade-color($v1-info, 20%);
     color: white;
   }
 
-  &[data-status=#{$v1-status-error}] {
+  &[data-status="#{$v1-status-error}"] {
     background-color: $v1-error;
     border-color: shade-color($v1-error, 20%);
     color: white;

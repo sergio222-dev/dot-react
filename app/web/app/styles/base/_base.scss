@@ -1,20 +1,30 @@
 $theme-colors: (
-        "primary": red,
+  "primary": red,
 );
 
-html, body {
+html,
+body {
   margin: 0;
   font-size: $v1-font-size-default;
   color: shade-color($v1-dark, 10%);
 
-
-  //@font-face {
+  // @font-face {
   //  font-family: Roboto sans-serif;
   //  src: url("/public/fonts/roboto/Roboto-Regular.ttf");
-  //}
+  // }
 
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 * {
@@ -56,4 +66,3 @@ $v1-margins: 4;
 }
 
 @include v1-margin-side;
-

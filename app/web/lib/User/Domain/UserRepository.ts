@@ -7,7 +7,7 @@ export interface IUserMetaState {
 }
 
 export interface UserRepositoryActions {
-  Save: (user: User) => Promise<void>
+  Save: (user: User) => Promise<void>;
 }
 
 export type UserRepositoryType = () => UserRepositoryActions;

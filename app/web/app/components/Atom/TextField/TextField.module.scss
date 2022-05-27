@@ -5,20 +5,20 @@
   height: 3.6rem;
   border-width: 0.1rem;
   border-style: solid;
-  padding:0 .5rem;
+  padding: 0 0.5rem;
   width: 100%;
-
   font-size: 1.4rem;
 
   &:hover {
-    //border-color: blue;
-    //border-width: 1px;
+    // border-color: blue;
+    // border-width: 1px;
   }
 
   &:focus {
-    //padding: 0;
+    // padding: 0;
     outline: 0;
-    //border: 2px solid $v1-input-border-color;
+
+    // border: 2px solid $v1-input-border-color;
     border-radius: 0;
   }
 }

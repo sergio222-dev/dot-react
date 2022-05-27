@@ -27,7 +27,7 @@ export class Fetcher {
     return new Fetcher(options);
   }
 
-  public async post<T>(endpoint: string, data: object) {
+  public async post(endpoint: string, data: object) {
     const url = this.baseUrl + endpoint;
     const method = "POST";
     const body = JSON.stringify(data);
@@ -37,7 +37,7 @@ export class Fetcher {
 
     const headersKey = Object.keys(this.headers);
 
-    headersKey.forEach((k) => {
+    headersKey.forEach(k => {
       console.log(`Added header ${k.toLowerCase()} with value ${this.headers[k].toLowerCase()}`);
       headers.append(k.toLowerCase(), this.headers[k].toLowerCase());
     });

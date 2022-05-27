@@ -19,14 +19,14 @@ module.exports = {
   },
   // Alias path config bug
   // https://github.com/storybookjs/storybook/issues/11989
-  webpackFinal: async (config) => {
+  webpackFinal: async config => {
     config.resolve.plugins = [new TsconfigPathsPlugin({ extensions: config.resolve.extensions })];
 
     // get index of css rule
-    const ruleCssIndex = config.module.rules.findIndex((rule) => rule.test.toString() === "/\\.css$/");
+    const ruleCssIndex = config.module.rules.findIndex(rule => rule.test.toString() === "/\\.css$/");
 
     // map over the 'use' array of the css rule and set the 'module' option to true
-    config.module.rules[ruleCssIndex].use.map((item) => {
+    config.module.rules[ruleCssIndex].use.map(item => {
       if (item.loader && item.loader.includes("/css-loader/")) {
         item.options.modules = {
           mode: "local",

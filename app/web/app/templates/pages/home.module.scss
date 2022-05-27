@@ -2,7 +2,7 @@
 @import "../../styles/abstracts/variables";
 
 .container {
-  @include make-container();
+  @include make-container;
 }
 
 .v1-logo-bar {
