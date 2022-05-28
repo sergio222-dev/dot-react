@@ -5,6 +5,7 @@
       "@templates/*": ["app/templates/*"],
       "@styles/*": ["app/styles/*"],
       "@atoms/*": ["app/components/Atom/*"],
+      "@molecules/*": ["app/components/Molecule/*"],
       "@forms/*": ["app/components/Forms/*"],
       "@organism/*": ["app/components/Organism/*"],
       "@hooks/*": ["hooks/*"],

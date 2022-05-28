@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import "../app/styles/app.scss";
-import { BuildContainer } from "../lib/Shared/Infrastructure/DI/Container";
+import { BuildContainer } from "../lib/Shared/Infrastructure/DI/Inversify/Container";
 
 BuildContainer();
 

@@ -6,7 +6,7 @@ import { IUserMetaState } from "@lib/User/Domain/UserRepository";
 import { useUser } from "@lib/User/Presentation/useUser";
 
 // UI LOGIC
-export const useRegisterForm = () => {
+export const useRegisterPresenter = () => {
   // STATE
   // const [successfulRegistration, setSuccessfulRegistration] = useState(false);
   const userMetaState = useRecoilValue<IUserMetaState>(userMetaAtom);

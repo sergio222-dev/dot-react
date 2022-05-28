@@ -1,17 +1,13 @@
-import type { NextPage } from "next";
-import { AppBar } from "@organism/AppBar";
-import Container from "@atoms/Container";
-import styles from "@templates/pages/home.module.scss";
+import { NextPage } from "next";
+import RegisterLoginForm from "@organism/RegisterLoginForm";
+import styles from "@templates/pages/registerLogin.module.scss";
 
-const Home: NextPage = () => {
-    return (
-        <section>
-            <div className={styles["v1-logo-bar"]}></div>
-            <Container>
-                <AppBar />
-            </Container>
-        </section>
-    );
+const Index: NextPage = () => {
+  return (
+    <section className={styles["v1-register-login-container"]}>
+      <RegisterLoginForm />
+    </section>
+  );
 };
 
-export default Home;
+export default Index;
