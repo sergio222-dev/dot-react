@@ -10,12 +10,10 @@ interface AlertAttributes {
 
 type AlertProps = HTMLAttributes<HTMLDivElement>;
 
-const Alert: FC<AlertProps & AlertAttributes> = ({ children, status, className }) => {
+export const Alert: FC<AlertProps & AlertAttributes> = ({ children, status, className }) => {
   return (
     <div {...attr({ status })} className={cls(className, styles["v1-alert-container"])}>
       {children}
     </div>
   );
 };
-
-export default Alert;
