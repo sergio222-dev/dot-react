@@ -1,4 +1,4 @@
-import { useService } from "@lib/Shared/Infrastructure/useService";
+import { useService } from "@lib/Shared/Application/useService";
 import { UserRepositoryType } from "@lib/User/Domain/UserRepository";
 import Types from "@lib/Shared/Infrastructure/DI/Types";
 import { useUserService } from "@lib/User/Application/useUserService";

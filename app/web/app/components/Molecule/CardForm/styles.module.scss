@@ -1,7 +1,7 @@
 @import "../../../styles/abstracts/bootstrap";
 @import "../../../styles/abstracts/variables";
 
-.v1-register-form-card-container {
+.v1-card-form-container {
   width: 100%;
 
   @include media-breakpoint-up(sm) {
@@ -9,13 +9,13 @@
     min-height: 416px;
   }
 
-  .v1-register-form-card-header {
+  .v1-card-form-header {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 5.6rem;
-    background-color: $v1-blue-dark;
-    color: $v1-white-light;
+    background-color: $v1-dark;
+    color: $v1-light;
     text-transform: uppercase;
   }
 }

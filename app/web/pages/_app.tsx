@@ -1,4 +1,4 @@
-import { BuildContainer, container } from "@lib/Shared/Infrastructure/DI/Container";
+import { BuildContainer, container } from "@lib/Shared/Infrastructure/DI/Inversify/Container";
 import "reflect-metadata";
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
